@@ -14,8 +14,8 @@ public class UserRepository {
     private long nextId;
 
     private UserRepository() {
-        userList.add(new User(1L, "Justin", "justin.ng@gmail.com"));
-        userList.add(new User(2L, "Charlie", "charlie@yahoo.com"));
+        userList.add(User.builder().id(1L).name("Justin").email("justin.ng@gmail.com").build());
+        userList.add(User.builder().id(2L).name("Charlie").email("charlie@yahoo.com").build());
         nextId = userList.size();
     }
 
